@@ -9,7 +9,6 @@
 //https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/index.html#//apple_ref/doc/uid/TP40015214-CH2-SW1
 
 // TODO: Modificações pendentes
-// 1 - Corrigir bug do rating control durante edit mode (delete) da table view
 // 2 - Corrigir bugs de orientação para modo landscape
 
 import UIKit

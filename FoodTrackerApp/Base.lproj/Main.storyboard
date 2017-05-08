@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F67a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Eu1-U3-sc3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F71b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Eu1-U3-sc3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -58,23 +58,46 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="98"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F6k-SS-7lr">
-                                            <rect key="frame" x="8" y="8" width="90" height="90"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1eB-GB-JxR">
-                                            <rect key="frame" x="106" y="8" width="252" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QL9-xS-GMT" customClass="RatingControl" customModule="FoodTrackerApp" customModuleProvider="target">
-                                            <rect key="frame" x="106" y="37" width="252" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="tintColor" red="1" green="0.50196078431372548" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GjY-Jz-eOc">
+                                            <rect key="frame" x="4" y="8" width="371" height="90"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F6k-SS-7lr">
+                                                    <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="90" id="GuG-Yh-iEI"/>
+                                                        <constraint firstAttribute="width" constant="90" id="Qns-T7-Tmn"/>
+                                                        <constraint firstAttribute="width" secondItem="F6k-SS-7lr" secondAttribute="height" multiplier="1:1" id="ZKM-n1-fVc"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="cc4-qD-Sv6">
+                                                    <rect key="frame" x="90" y="0.0" width="281" height="90"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1eB-GB-JxR">
+                                                            <rect key="frame" x="0.0" y="0.0" width="42" height="46"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QL9-xS-GMT" customClass="RatingControl" customModule="FoodTrackerApp" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="46" width="252" height="44"/>
+                                                            <color key="tintColor" red="1" green="0.50196078431372548" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="cc4-qD-Sv6" firstAttribute="leading" secondItem="F6k-SS-7lr" secondAttribute="trailing" id="Bye-n5-JQH"/>
+                                                <constraint firstItem="cc4-qD-Sv6" firstAttribute="top" secondItem="GjY-Jz-eOc" secondAttribute="top" id="RYD-yE-yNR"/>
+                                                <constraint firstAttribute="trailing" secondItem="cc4-qD-Sv6" secondAttribute="trailing" id="vAO-fI-tA6"/>
+                                                <constraint firstAttribute="bottom" secondItem="cc4-qD-Sv6" secondAttribute="bottom" id="wKg-Su-K7Z"/>
+                                            </constraints>
                                         </stackView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="GjY-Jz-eOc" firstAttribute="leading" secondItem="DOz-Js-WIR" secondAttribute="leading" constant="4" id="C07-WH-axi"/>
+                                        <constraint firstAttribute="trailing" secondItem="GjY-Jz-eOc" secondAttribute="trailing" id="g0y-aq-X9e"/>
+                                        <constraint firstAttribute="bottom" secondItem="GjY-Jz-eOc" secondAttribute="bottom" id="qTZ-Td-FmI"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="nameLabel" destination="1eB-GB-JxR" id="VeW-Zl-0zQ"/>
